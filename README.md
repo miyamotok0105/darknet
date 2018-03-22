@@ -3,7 +3,7 @@
 # インストール
 
 ```
-git clone https://github.com/pjreddie/darknet.git
+git clone https://github.com/miyamotok0105/darknet.git
 cd darknet
 make
 ```
