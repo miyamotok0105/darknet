@@ -1,17 +1,30 @@
 ![Darknet Logo](http://pjreddie.com/media/files/darknet-black-small.png)
 
+# 環境
+
+ubuntu    
+
+
+```
+nvcc -v
+nvidia-smi
+```
+
 # インストール
 
 ```
 git clone https://github.com/miyamotok0105/darknet.git
 cd darknet
-make
 ```
 
 Makefileの修正    
 
 ```
 GPU=1に変更
+```
+
+```
+make
 ```
 
 # 実行
