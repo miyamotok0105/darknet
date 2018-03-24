@@ -103,7 +103,7 @@ filters数は下記の計算式を使う。
 (2+4+1)5=35    
 
 
-```cfg:darknet/cfg/yolo-voc.cfg
+```txt:darknet/cfg/yolo-voc.cfg
 [net]
 # Testing
 # batch=1
@@ -136,7 +136,7 @@ num=5
 
 trainとvalidのパスを変更する。
 
-```cfg:darknet/cfg/voc.data
+```txt:darknet/cfg/voc.data
 classes= 20
 train  = /home/pjreddie/data/voc/train.txt
 valid  = /home/pjreddie/data/voc/2007_test.txt
