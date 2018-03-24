@@ -42,7 +42,10 @@ wget https://pjreddie.com/media/files/yolo.weights
 ./darknet detect cfg/yolo.cfg yolo.weights data/dog.jpg -thresh 0
 ```
 
-# voc形式で学習
+# PASCAL Visual Object Classes形式で学習
+PASCAL（Pattern Analysis, Statistical Modelling and Computational Learning）というヨーロッパの研究コミュニティが2005 年から 2012 年行なっていたコンペ
+で使用していたデータセット。
+
 
 ```
 wget https://pjreddie.com/media/files/VOCtrainval_11-May-2012.tar
