@@ -88,7 +88,6 @@ mkdir data/sample1/labels
 python voc_label.py
 python output_label_list.py
 #cfg/voc_hoge.dataとcfg/yolo-voc_hoge.cfgを環境に合わせて修正。
-./darknet detector train cfg/voc_hoge.data cfg/yolo-voc_hoge.cfg darknet19_448.conv.23
 ```
 
 学習の場合はbatchを64に、テストの場合はbatchを1に変更。   
@@ -103,7 +102,7 @@ filters数は下記の計算式を使う。
 (2+4+1)5=35    
 
 
-darknet/cfg/yolo-voc.cfgのファイル
+darknet/cfg/yolo-dog.cfgのファイル
 ```
 [net]
 # Testing
@@ -137,7 +136,7 @@ num=5
 
 trainとvalidのパスを変更する。
 
-darknet/cfg/voc.dataのファイル
+darknet/cfg/dog.dataのファイル
 ```
 classes= 20
 train  = /home/pjreddie/data/voc/train.txt
@@ -145,6 +144,13 @@ valid  = /home/pjreddie/data/voc/2007_test.txt
 names = data/voc.names
 backup = backup
 ```
+
+学習データ作成が終わったら学習をする。
+
+```
+./darknet detector train cfg/voc_hoge.data cfg/yolo-voc_hoge.cfg darknet19_448.conv.23
+```
+
 
 # 参照
 
