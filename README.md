@@ -91,6 +91,58 @@ python output_label_list.py
 ./darknet detector train cfg/voc_hoge.data cfg/yolo-voc_hoge.cfg darknet19_448.conv.23
 ```
 
+学習の場合はbatchを64に、テストの場合はbatchを1に変更。   
+classes数を変更する。     
+filters数は下記の計算式を使う。    
+
+クラス数を変えた時の計算    
+(classes + (coords + 4) + 1)*(NUM)    
+6クラスの場合    
+(6+4+1)5=55    
+2クラスの場合    
+(2+4+1)5=35    
+
+
+```:darknet/cfg/yolo-voc.cfg
+[net]
+# Testing
+# batch=1
+# subdivisions=1
+# Training
+batch=64
+subdivisions=8
+
+...
+
+
+[convolutional]
+size=1
+stride=1
+pad=1
+filters=125 #
+activation=linear
+
+
+[region]
+anchors =  1.3221, 1.73145, 3.19275, 4.00944, 5.05587, 8.09892, 9.47112, 4.84053, 11.2364, 10.0071
+bias_match=1
+classes=20 #class数を変える
+coords=4
+num=5
+
+...
+
+```
+
+trainとvalidのパスを変更する。
+
+```:darknet/cfg/voc.data
+classes= 20
+train  = /home/pjreddie/data/voc/train.txt
+valid  = /home/pjreddie/data/voc/2007_test.txt
+names = data/voc.names
+backup = backup
+```
 
 # 参照
 
