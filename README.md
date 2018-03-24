@@ -63,10 +63,11 @@ wget https://pjreddie.com/media/files/darknet19_448.conv.23
 # 学習データを作成する
 
 toolを使用して学習データを作る    
-https://github.com/puzzledqs/BBox-Label-Tool    
-下記のフォーマットへ変更する必要がある。    
+https://github.com/miyamotok0105/BBox-Label-Tool    
+下記のフォーマットへである必要がある。    
 
 ```
+#class_num area1 area2 area3 area4
 11 10 10 100 100
 14 20 20 120 130
 ```
