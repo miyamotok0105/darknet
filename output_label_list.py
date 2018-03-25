@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+#example
+#python output_label_list.py /home/ubuntu/darknet/001/bf664c27-a4e3-4684-aced-dc0b5a805bc7/images image_list_dog.txt
 import os, csv, time
 import glob
 import os.path
