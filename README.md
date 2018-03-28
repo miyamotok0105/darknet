@@ -63,7 +63,7 @@ wget https://pjreddie.com/media/files/darknet19_448.conv.23
 #cfg/voc.dataとcfg/yolo-voc.cfgを環境に合わせて修正。
 ./darknet detector train cfg/voc.data cfg/yolo-voc.cfg darknet19_448.conv.23
 #テスト
-./darknet detector test cfg/voc.data cfg/yolo-voc.cfg yolo.weights data/dog.jpg
+./darknet detector test cfg/voc.data cfg/yolo-voc-test.cfg yolo.weights data/dog.jpg
 ```
 
 # 学習データを作成する
