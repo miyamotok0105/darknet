@@ -78,7 +78,7 @@ https://github.com/miyamotok0105/BBox-Label-Tool
 14 20 20 120 130
 ```
 
-# 学習データを使って学習
+# 独自学習データを使って学習
 
 voc_label.pyで正規化、output_label_list.pyで学習するファイル一覧を作成。    
 
