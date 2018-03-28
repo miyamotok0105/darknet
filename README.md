@@ -59,8 +59,11 @@ python voc_label.py
 cat 2007_train.txt 2007_val.txt 2012_*.txt > train.txt
 mkdir backup
 wget https://pjreddie.com/media/files/darknet19_448.conv.23
+#学習
 #cfg/voc.dataとcfg/yolo-voc.cfgを環境に合わせて修正。
 ./darknet detector train cfg/voc.data cfg/yolo-voc.cfg darknet19_448.conv.23
+#テスト
+./darknet detector test cfg/voc.data cfg/yolo-voc.cfg yolo.weights data/dog.jpg
 ```
 
 # 学習データを作成する
@@ -149,7 +152,15 @@ backup = backup
 学習データ作成が終わったら学習をする。
 
 ```
+#学習
 ./darknet detector train cfg/voc_hoge.data cfg/yolo-voc_hoge.cfg darknet19_448.conv.23
+```
+
+学習が終わったらテストをする。    
+
+```
+#テスト
+./darknet detector test cfg/voc_hoge.data cfg/yolo-voc_hoge.cfg yolo.weights data/dog.jpg
 ```
 
 
